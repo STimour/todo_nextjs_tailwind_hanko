@@ -1,6 +1,6 @@
 import { prisma } from "@/db";
-import { NewTodo } from "@/Componets/NewTodo";
-import { TodoItems } from "@/Componets/TodoItems";
+import { NewTodo } from "@/app/Componets/NewTodo";
+import { TodoItems } from "@/app/Componets/TodoItems";
 
 export default async function Todo() {
     const todos =  await prisma.todo.findMany()
