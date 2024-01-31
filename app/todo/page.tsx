@@ -1,8 +1,8 @@
 import { prisma } from "@/db";
-import { NewTodo } from "@/app/Componets/NewTodo";
-import { TodoItems } from "@/app/Componets/TodoItems";
-import { Profile } from "../Componets/Profile";
-import Logout from "../Componets/Logout";
+import { NewTodo } from "@/app/components/NewTodo";
+import { TodoItems } from "@/app/components/TodoItems";
+import { Profile } from "../components/Profile";
+import Logout from "../components/Logout";
 import { userIdVerif } from "../api/todo/route";
 
 export default async function Todo() {

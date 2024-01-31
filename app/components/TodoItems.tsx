@@ -1,8 +1,6 @@
 "use client"
 import { useRouter } from "next/navigation"
 import { Todo } from "@prisma/client"
-import { stringify } from "querystring"
-
 
 export const TodoItems = ({ todos }: { todos: Todo[] }) => {
     const router = useRouter()
