@@ -9,7 +9,7 @@ WORKDIR ./
 
 COPY package*.json ./
 RUN npm install
-RUN npm run postintall
+RUN npm run postinstall
 
 COPY . .
 RUN npm run build
