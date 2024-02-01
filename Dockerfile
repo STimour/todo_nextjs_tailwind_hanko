@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:14
 
 # Installation de npm
 RUN apt-get update && \
@@ -7,13 +7,23 @@ RUN apt-get update && \
 
 WORKDIR ./
 
+# Copie du fichier package.json pour installer les dépendances
 COPY package*.json ./
 RUN npm install
 
+# Copie du reste des fichiers
 COPY . .
 
 RUN npm run postinstall
 
+# Construction de l'application
 RUN npm run build
 
+# Exposer le port 3000
+EXPOSE 3000
+
+# Utiliser un utilisateur non-root
+USER node
+
+# Commande par défaut pour démarrer l'application
 CMD ["npm", "run", "start"]
