@@ -9,9 +9,9 @@ WORKDIR ./
 
 COPY package*.json ./
 RUN npm install
+RUN npm run postintall
 
 COPY . .
-
 RUN npm run build
 
 CMD ["npm", "run", "start"]
