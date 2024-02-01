@@ -5,7 +5,7 @@ RUN apt-get update && \
     apt-get install -y npm && \
     npm install -g npm@latest
 
-WORKDIR /app
+WORKDIR ./
 
 COPY package*.json ./
 RUN npm install
