@@ -9,6 +9,7 @@ WORKDIR ./
 
 COPY package*.json ./
 RUN npm install
+RUN npx prisma generate 
 RUN npm run postinstall
 
 COPY . .
