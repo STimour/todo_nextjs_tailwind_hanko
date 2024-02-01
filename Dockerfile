@@ -1,4 +1,4 @@
-FROM node:14
+FROM node:latest
 
 # Installation de npm
 RUN apt-get update && \
