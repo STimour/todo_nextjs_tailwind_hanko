@@ -1,6 +1,6 @@
 "use client"
 import dynamic from 'next/dynamic';
-import HankoAuth from './components/HankoAuth';
+import HankoAuth from './Components/HankoAuth';
 
 export default function Home(){
   return (

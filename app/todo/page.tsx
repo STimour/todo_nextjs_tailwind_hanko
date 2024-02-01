@@ -1,12 +1,12 @@
 import { prisma } from "@/db";
-import { NewTodo } from "@/app/components/NewTodo";
-import { TodoItems } from "@/app/components/TodoItems";
-import { Profile } from "../components/Profile";
-import Logout from "../components/Logout";
-import { userIdVerif } from "../api/todo/route";
+import { NewTodo } from "@/app/Components/NewTodo";
+import { TodoItems } from "@/app/Components/TodoItems";
+import { Profile } from "../Components/Profile";
+import Logout from "../Components/Logout";
+import { userId } from "../api/todo/route";
 
 export default async function Todo() {
-    const userID = await userIdVerif();
+    const userID = await userId();
 
     const todos = await prisma.todo.findMany({
       where: {

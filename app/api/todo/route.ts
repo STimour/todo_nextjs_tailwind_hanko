@@ -3,7 +3,7 @@ import { cookies } from "next/headers";
 import * as jose from "jose";
 import { prisma } from "@/db";
 
-export async function userIdVerif() {
+export async function userId() {
   const token = cookies().get("hanko")?.value;
   const payload = jose.decodeJwt(token ?? "");
 
@@ -11,7 +11,7 @@ export async function userIdVerif() {
 }
 
 export async function POST(req: Request) {
-  const userID = await userIdVerif();
+  const userID = await userId();
   const { title } = await req.json();
 
   if (userID) {
