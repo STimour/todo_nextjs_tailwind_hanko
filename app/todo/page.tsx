@@ -1,9 +1,9 @@
-import { prisma } from "@/db";
 import { NewTodo } from "@/app/Components/NewTodo";
 import { TodoItems } from "@/app/Components/TodoItems";
 import { Profile } from "../Components/Profile";
 import Logout from "../Components/Logout";
 import { userId } from "../userId";
+import { prisma } from "@/lib/prisma";
 
 export default async function Todo() {
     const userID = await userId();
