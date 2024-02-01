@@ -5,7 +5,7 @@ RUN apt-get update && \
     apt-get install -y npm && \
     npm install -g npm@latest
 
-WORKDIR ./
+WORKDIR /
 
 # Copie du fichier package.json pour installer les dépendances
 COPY package*.json ./
