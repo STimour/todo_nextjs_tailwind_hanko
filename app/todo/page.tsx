@@ -3,7 +3,7 @@ import { NewTodo } from "@/app/Components/NewTodo";
 import { TodoItems } from "@/app/Components/TodoItems";
 import { Profile } from "../Components/Profile";
 import Logout from "../Components/Logout";
-import { userId } from "../api/todo/route";
+import { userId } from "../userId";
 
 export default async function Todo() {
     const userID = await userId();
