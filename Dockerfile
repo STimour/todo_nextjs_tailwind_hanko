@@ -10,11 +10,11 @@ WORKDIR ./
 # Copie du fichier package.json pour installer les dépendances
 COPY package*.json ./
 RUN npm install
+RUN npm run postinstall
 
 # Copie du reste des fichiers
 COPY . .
 
-RUN npm run postinstall
 
 # Construction de l'application
 RUN npm run build
